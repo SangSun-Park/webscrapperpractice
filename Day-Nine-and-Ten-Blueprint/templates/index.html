@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <title>
+    {{com['title']}}
+  </title>
+<head>
+  <link href="https://andybrewer.github.io/mvp/mvp.css" rel="stylesheet"></link>
+</head>
+<body>
+  <header> 
+    <h1>{{com['title']}}</h1>
+    <div>
+      <span>{{com['points']}} points</span> |
+      <span> By: {{com['author']}}</span> | 
+      <a href={{com['url']}}>{{com['url']}}</a>
+    </div>
+  </header>
+   {% for c in com['children'] %}
+    <div>
+      {% if c['author'] == None %}
+        <strong>[deleted]</strong>
+      {% else %}
+        <strong>{{c['author']}} :</strong>
+        <p></p>
+        <p>{{c['text']|safe}}</p>
+        <p></p>
+      {% endif %}
+    </div>
+    <hr>
+    {% endfor %}
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link href="https://andybrewer.github.io/mvp/mvp.css" rel="stylesheet"></link>
+</head>
+
+<body>
+  <header>
+    <h1>Reddit Reader</h1>
+    <h3>A service to aggregate all your favourite subreddits</h3>
+  </header>
+  <form action='/read'>
+    <h4>Select the subreddits you're interested on:</h4>
+    <ul>
+      <label for='javascript'><input type="checkbox" name="javascript" id='javascript'> r/javascript</label>
+      <label for='reactjs'><input type="checkbox" name="reactjs" id="on"> r/reactjs</label>
+      <label for='reactnative'><input type="checkbox" name="reactnative" id="on"> r/reactnative</label>
+      <label for='programming'><input type="checkbox" name="programming" id="on"> r/programming</label>
+      <label for='css'><input type="checkbox" name="css" vid="on"> r/css</label>
+      <label for='golang'><input type="checkbox" name="golang" id="on"> r/golang</label>
+      <label for='flutter'><input type="checkbox" name="flutter" id="on"> r/flutter</label>
+      <label for='rust'><input type="checkbox" name="rust" id="on"> r/rust</label>
+      <label for='django'><input type="checkbox" name="django" id="on"> r/django</label>
+    </ul>
+    <button type="submit">Aggregate</button>
+  </form>
+</body>
+
+</html>

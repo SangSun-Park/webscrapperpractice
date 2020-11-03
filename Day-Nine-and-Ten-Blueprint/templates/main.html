@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Big News!</title>
+    <link href="https://andybrewer.github.io/mvp/mvp.css" rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <h1>Big News!</h1>
+    {% if mode == 1%}
+    <div>Order by: 
+      <strong>Popular</strong> |
+      <a href="/?order_by=new">New</a>
+    </div>
+    {% else %}
+    <div>Order by: 
+      <a href="/?order_by=popular">Popular</a> |
+      <strong>New</strong>
+    </div>
+    {% endif %}
+  </header>
+    {% for n in news['hits'] %}
+    <div>
+      <div>
+      (<a href = /{{n['objectID']}}>{{n['title']}}</a>)
+      (<a href = {{n['url']}} target="_blanl">{{n['url']}}</a>)
+      </div>
+      <div>
+      <span>{{n['points']}} points</span> |
+      <span> By: {{n['author']}}</span> |
+      <span> {{n['num_comments']}} comments</span>
+      </div>
+    </div>
+    <hr>
+    {% endfor %}
+</body>
+
+</html>
